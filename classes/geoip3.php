@@ -20,7 +20,7 @@ class Geoip3 {
 		if ( ! isset(Geoip3::$_instance))
 		{
 			// Load the configuration for this type
-			$config = Kohana::config('geoip3');
+			$config = Kohana::$config->load('geoip3');
 			
 			// Create a new session instance
 			Geoip3::$_instance = new Geoip3($config);
